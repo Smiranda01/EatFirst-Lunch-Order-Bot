@@ -32,8 +32,8 @@ class FoodOrder:
         return element_list
 
     def order_chicken_schnitzel_wrap(self):
-        self.wait.until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div/div/div[3]/div/div[2]/div/div[3]/div[2]/div/div/div[6]/div[2]/div[11]/div[1]/div')))
-        element = self.driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[3]/div/div[2]/div/div[3]/div[2]/div/div/div[6]/div[2]/div[11]/div[1]/div')
+        self.wait.until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div/div/div/div[3]/div/div[2]/div/div[3]/div[2]/div/div/div[6]/div[2]/div[11]/div[1]/div')))
+        element = self.driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[3]/div/div[2]/div/div[3]/div[2]/div/div/div[6]/div[2]/div[11]/div[1]/div')
         self.driver.execute_script("arguments[0].scrollIntoView({block: 'center', inline: 'center'});", element)
         element.click()
         self.click_by_css_selector("div.sds-select.sds-select-filled.sds-select-single.sds-select-show-arrow")
@@ -44,8 +44,8 @@ class FoodOrder:
         self.click_by_css_selector(".modal-footer.modal__cart-review button.sds-btn.sds-btn-primary")
 
     def order_club_sette_sandwich(self):
-        self.wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/div/div/div[3]/div/div[2]/div/div[3]/div[2]/div/div/div[6]/div[2]/div[21]/div[1]")))
-        element = self.driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[3]/div/div[2]/div/div[3]/div[2]/div/div/div[6]/div[2]/div[21]/div[1]")
+        self.wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/div/div/div/div[3]/div/div[2]/div/div[3]/div[2]/div/div/div[6]/div[2]/div[21]/div[1]/div")))
+        element = self.driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[3]/div/div[2]/div/div[3]/div[2]/div/div/div[6]/div[2]/div[21]/div[1]/div")
         self.driver.execute_script("arguments[0].scrollIntoView({block: 'center', inline: 'center'});", element)
         element.click()
         self.click_by_css_selector("div.sds-select.sds-select-filled.sds-select-single.sds-select-show-arrow")
@@ -56,8 +56,8 @@ class FoodOrder:
         self.click_by_css_selector(".modal-footer.modal__cart-review button.sds-btn.sds-btn-primary")
 
     def order_poached_chicken_sandwich(self):
-        self.wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div/div/div/div[3]/div/div[2]/div/div[3]/div[2]/div/div/div[6]/div[2]/div[9]")))
-        element = self.driver.find_element(By.XPATH, "/html/body/div/div/div/div[3]/div/div[2]/div/div[3]/div[2]/div/div/div[6]/div[2]/div[9]")
+        self.wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/div/div/div/div[3]/div/div[2]/div/div[3]/div[2]/div/div/div[6]/div[2]/div[9]/div[1]")))
+        element = self.driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[3]/div/div[2]/div/div[3]/div[2]/div/div/div[6]/div[2]/div[9]/div[1]")
         self.driver.execute_script("arguments[0].scrollIntoView({block: 'center', inline: 'center'});", element)
         element.click()
         self.click_by_css_selector("div.sds-select.sds-select-filled.sds-select-single.sds-select-show-arrow")
@@ -68,8 +68,8 @@ class FoodOrder:
         self.click_by_css_selector(".modal-footer.modal__cart-review button.sds-btn.sds-btn-primary")
 
     def order_southern_fried_wrap(self):
-        self.wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div/div/div/div[3]/div/div[2]/div/div[3]/div[2]/div/div/div[6]/div[2]/div[4]")))
-        element = self.driver.find_element(By.XPATH, "/html/body/div/div/div/div[3]/div/div[2]/div/div[3]/div[2]/div/div/div[6]/div[2]/div[4]")
+        self.wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/div/div/div/div[3]/div/div[2]/div/div[3]/div[2]/div/div/div[6]/div[2]/div[4]/div[1]")))
+        element = self.driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div/div[3]/div/div[2]/div/div[3]/div[2]/div/div/div[6]/div[2]/div[4]/div[1]")
         self.driver.execute_script("arguments[0].scrollIntoView({block: 'center', inline: 'center'});", element)
         element.click()
         self.click_by_css_selector("div.sds-select.sds-select-filled.sds-select-single.sds-select-show-arrow")
