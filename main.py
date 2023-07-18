@@ -8,6 +8,7 @@ from pages.food import FoodOrder
 from pages.checkout import Checkout
 from pages.payment import Payment
 from pages.new_order import NewOrder
+from pages.prehome import Pre_home
 from datetime import datetime
 from selenium.common.exceptions import TimeoutException
 from dotenv import load_dotenv
@@ -32,7 +33,7 @@ username_input = sign_in_page.send_keys_by_id("Email", os.getenv("EMAIL"))
 password_input = sign_in_page.send_keys_by_id("exampleInputPasswordLogin", os.getenv("PASSWORD"))
 sign_in_button = sign_in_page.click_by_css_selector("button.sds-btn.sds-btn-primary")
 
-for i in range(5):
+for i in range(3,5):
     food_random_manager = randint(1, 4)
     print(food_random_manager)
     # Choose address
@@ -121,3 +122,8 @@ for i in range(5):
     # Press new order button and start again
     new_order_page = NewOrder(driver)
     new_order_page.click_by_css_selector("a.sds-btn.sds-btn-primary")
+
+    # Press SM button to continue the loop
+    pre_home_page = Pre_home(driver)
+    pre_home_page.click_by_css_selector("button.uppercase.font-bold")
+
