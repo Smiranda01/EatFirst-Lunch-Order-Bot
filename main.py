@@ -33,7 +33,7 @@ username_input = sign_in_page.send_keys_by_id("Email", os.getenv("EMAIL"))
 password_input = sign_in_page.send_keys_by_id("exampleInputPasswordLogin", os.getenv("PASSWORD"))
 sign_in_button = sign_in_page.click_by_css_selector("button.sds-btn.sds-btn-primary")
 
-for i in range(2,3):
+for i in range(5):
     food_random_manager = randint(1, 5)
     print(food_random_manager)
     # Choose address
