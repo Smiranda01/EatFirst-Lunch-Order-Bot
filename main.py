@@ -33,8 +33,8 @@ username_input = sign_in_page.send_keys_by_id("Email", os.getenv("EMAIL"))
 password_input = sign_in_page.send_keys_by_id("exampleInputPasswordLogin", os.getenv("PASSWORD"))
 sign_in_button = sign_in_page.click_by_css_selector("button.sds-btn.sds-btn-primary")
 
-for i in range(3,5):
-    food_random_manager = randint(1, 4)
+for i in range(2,3):
+    food_random_manager = randint(1, 5)
     print(food_random_manager)
     # Choose address
     choose_address_page = ChooseAddress(driver)
@@ -54,16 +54,27 @@ for i in range(3,5):
         print(f"Could not click on the element: {e}")
     time.sleep(1)
 
+    if i == 2:
+        food_random_manager = 5
+        print("It's wednesday, ordering breakfast instead")
+
     #     Click on the foods we want to order from Food Order page
     food_order_page = FoodOrder(driver)
     if food_random_manager == 1:
         food_order_page.order_chicken_schnitzel_wrap()
+        food_order_page.order_fruit()
     elif food_random_manager == 2:
-        food_order_page.order_club_sette_sandwich()
+        food_order_page.order_deconstructed_burger_beef()
+        food_order_page.order_fruit()
     elif food_random_manager == 3:
-        food_order_page.order_poached_chicken_sandwich()
+        food_order_page.order_deconstructed_burger_chicken()
+        food_order_page.order_fruit()
     elif food_random_manager == 4:
         food_order_page.order_southern_fried_wrap()
+        food_order_page.order_fruit()
+    else:
+        food_order_page.order_breakfast()
+        food_order_page.order_fruit()
 
     time.sleep(2)
     # choose_date_button = food_order_page.click_by_css_selector(".cart-btn .sds-btn.sds-btn-outline")
@@ -112,7 +123,10 @@ for i in range(3,5):
         except TimeoutException:
             payment_page.click_by_xpath('//div[contains(@class, "sds-select-item-option-content") and text()="15| IT"]')
             time.sleep(1)
-
+    if i == 2:
+        payment_page.driver.execute_script("arguments[0].scrollIntoView({block: 'center', inline: 'center'});", dropdown_list[2])
+        time.sleep(1)
+        dropdown_list[2].click()
     payment_page.driver.execute_script("arguments[0].scrollIntoView({block: 'center', inline: 'center'});", dropdown_list[1])
     time.sleep(1)
     dropdown_list[1].click()
